@@ -15,11 +15,12 @@
             <table class="table table-hover my-0">
                 <thead class="table-dark">
                     <tr>
-                        <th style="width: 12%" class="d-none d-xl-table-cell" >Id Tramsaksi</th>
+                        <th style="width: 5%" class="d-none d-xl-table-cell" >Id</th>
                         <th style="width: 18%" class="d-none d-xl-table-cell">Nama Customer</th>
                         <th style="width: 15%" class="d-none d-xl-table-cell">No Identitas</th>
                         <th style="width: 10%" class="d-none d-xl-table-cell">Item</th>
                         <th style="width: 10%" class="d-none d-xl-table-cell">Durasi</th>
+                        <th style="width: 10%" class="d-none d-xl-table-cell">No Telp</th>
                         <th style="width: 15%" class="d-none d-xl-table-cell">Total</th>
                         <th style="width: 14%" class="d-none d-xl-table-cell">Action</th>
                     </tr>
@@ -27,11 +28,12 @@
                 <tbody>
                     @foreach ($transactions as $key => $transaction)
                         <tr>
-                            <td style="width: 12%">{{ $transaction->id }}</td>
+                            <td style="width: 5%">{{ $transaction->id }}</td>
                             <td style="width: 18%">{{ $transaction->nama_cust }}</td>
                             <td style="width: 15%">{{ $transaction->no_identitas }}</td>
                             <td style="width: 10%">{{ $transaction->items->nama }} </td>
                             <td style="width: 10%">{{ $transaction->durasi }} hari</td>
+                            <td style="width: 10%">{{ $transaction->no_telp }}</td>
                             <td style="width: 15%">Rp.{{ $transaction->total_harga }}</td>
                             <td style="width: 14%">
                                 <a href="{{ route('cetakstruk') }}" target="_blank" class="btn btn-sm bg-success waves-effect waves-light">Detail</a>

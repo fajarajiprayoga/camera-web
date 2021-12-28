@@ -47,6 +47,7 @@ class TransactionController extends Controller
         $request->validate([
             'nama_cust' => 'required',
             'no_identitas' => 'required',
+            'no_telp' => 'required',
             'item_id' => 'required',
             'durasi' => 'required'
         ]);
@@ -54,6 +55,7 @@ class TransactionController extends Controller
         $transaction = new Transaction;
         $transaction->nama_cust = $request->nama_cust;
         $transaction->no_identitas = $request->no_identitas;
+        $transaction->no_telp = $request->no_telp;
         $transaction->item_id = $request->item_id;
         $transaction->durasi = $request->durasi;
 

@@ -17,6 +17,7 @@ class CreateTransactionsTable extends Migration
             $table->id()->autoIncrement();
             $table->string('nama_cust');
             $table->string('no_identitas');
+            $table->string('no_telp');
             $table->integer('item_id');
             $table->integer('durasi');
             $table->integer('total_harga');

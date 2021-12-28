@@ -79,7 +79,7 @@
             <div class="col-4">
                 <div class="pt-4 card text-center" style="width: 24rem;height: 15rem;">
                     <div class="card-body">
-                        <i class="align-middle mb-3" data-feather="loader" style="width: 70px;height: 70px;"></i>
+                        <i class="align-middle mb-3" data-feather="layers" style="width: 70px;height: 70px;"></i>
                         <h5 class="card-title text-dark">Stock Update</h5>
                         <p class="card-text">Tidak perlu khawatir kehabisan stock, karena stock item yang tersedia pasti
                             selalu diupdate</p>
@@ -108,7 +108,7 @@
                         <div class="col-md-3 card-hover" id="grow">
                             <div class="card pl-4 pr-4 pt-4 shadow-lg border">
                                 <img class="mx-auto" width="230px" height="230px"
-                                    src="{{ asset('picture/'. $item->picture) }}" alt="" srcset="">
+                                    src="{{ asset('picture/'. $item->picture) }}" alt="{{ asset('adminkit/src/img/avatars/avatar.jpg') }}" srcset="">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">{{ $item->nama }}</h5>
                                     <p class="card-text">{{ $item->deskripsi }}</p>
@@ -143,7 +143,7 @@
             <div class="col-md-3">
             <div class="mx-auto card large-shadow text-center" style="width: 18rem;">
                 <img style="width: 200px; height:200px;" src="{{ asset('foto_tim/'.$team->foto) }}"
-                class="card-img-top mx-auto rounded-circle" alt="...">
+                class="card-img-top mx-auto rounded-circle" alt="{{ asset('adminkit/src/img/avatars/avatar.jpg') }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ $team->nama }}</h5>
                     <p class="card-text fw-bold fs-5">{{ $team->tugas }}</p>
@@ -233,13 +233,9 @@
                         </tbody>
                     </table>
                 </div>
-                <!--Grid column-->
             </div>
-            <!--Grid row-->
         </div>
-        <!-- Grid container -->
     </footer>
-    {{-- end footer --}}
     </div>
 
     {{-- javascript --}}

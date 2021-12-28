@@ -33,6 +33,15 @@
                                 @endforeach
                             </div>
                             <div class="form-group row mb-3">
+                                <h5 class="card-title mb-0">No Telp</h5>
+                                <div class="col-sm-15 mt-2">
+                                    <input class="form-control" htmlspecialchars type="text" name="no_telp" id="no_telp" placeholder="Masukkan No Telphone">
+                                </div>
+                                @foreach ($errors->get('no_telp') as $error)
+                                    <p class="text-danger">{{ $error }}</p>
+                                @endforeach
+                            </div>
+                            <div class="form-group row mb-3">
                                 <h5 class="card-title mb-0">Item</h5>
                                 <div class="col-sm-15 mt-2">
                                     <select name="item_id" class="form-select" aria-label="Default select example" id="">
