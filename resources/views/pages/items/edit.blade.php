@@ -57,7 +57,7 @@
                             <div class="form-group row mb-3">
                                 <h5 class="card-title mb-0">Status</h5>
                                 <div class="col-sm-15 mt-2">
-                                    <select name="status" class="custom-select">
+                                    <select name="status" class="form-select">
                                         {{-- <option selected>Update Status</option> --}}
                                         <option value="ya">Tersedia</option>
                                         <option value="tidak">Tidak Tersedia</option>

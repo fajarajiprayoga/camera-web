@@ -36,7 +36,6 @@
                             <td style="width: 10%">{{ $transaction->no_telp }}</td>
                             <td style="width: 15%">Rp.{{ $transaction->total_harga }}</td>
                             <td style="width: 14%">
-                                <a href="{{ route('cetakstruk') }}" target="_blank" class="btn btn-sm bg-success waves-effect waves-light">Detail</a>
                                 <form action="{{ route('transaction.destroy',[$transaction->id]) }}" method="post" class="d-inline">
                                     @csrf
                                     <input type="hidden" name="_method" value="delete">
