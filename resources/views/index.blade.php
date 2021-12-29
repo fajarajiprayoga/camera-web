@@ -185,9 +185,8 @@
                                     Kami</h5>
 
                                 <p>
-                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium
-                                    voluptatum deleniti atque corrupti.
+                                    Go And Back menyediakan berbagai
+                        jenis kamera siap pakai. Rasakan juga promo dan diskon-diskon menarik setiap harinya.
                                 </p>
 
                                 <div style="letter-spacing: 2px; color: #818963;" class="mt-4">
