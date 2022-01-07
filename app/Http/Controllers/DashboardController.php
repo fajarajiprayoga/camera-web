@@ -69,7 +69,7 @@ class DashboardController extends Controller
         $catatan->catatan = $request->catatan;
         $catatan->save();
 
-        return redirect()->route('dashboard.index');
+        return redirect()->route('dashboard.index')->with('success', 'Berhasil membuat catatan baru!');;
     } 
 
     /**
@@ -117,7 +117,7 @@ class DashboardController extends Controller
         $catatan = Note::findOrFail($id);
         $catatan->delete();
 
-        return redirect()->route('dashboard.index');
+        return redirect()->route('dashboard.index')->with('warning', 'Berhasil menghapus catatan!');;
     }
 
     //Subscribers

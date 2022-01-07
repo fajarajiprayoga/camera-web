@@ -60,8 +60,7 @@ class ItemController extends Controller
         $item->harga = $request->harga;
         $item->save();
 
-        $request->session()->flash('status', 'Item baru ditambahkan!');
-        return redirect()->route('items.index');
+        return redirect()->route('items.index')->with('success', 'Berhasil menambahkan item baru!');;
     }
 
     /**
@@ -123,7 +122,7 @@ class ItemController extends Controller
         $item->harga = $request->harga;
         $item->save();
 
-        return redirect()->route('items.index');
+        return redirect()->route('items.index')->with('success', 'Berhasil mengedit data item!');;
     }
 
     /**
@@ -143,6 +142,6 @@ class ItemController extends Controller
 
         $item->delete();
 
-        return redirect()->route('items.index');
+        return redirect()->route('items.index')->with('warning', 'Berhasil menghapus item!');;
     }
 }

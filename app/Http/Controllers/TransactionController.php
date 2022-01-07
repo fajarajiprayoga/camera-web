@@ -70,7 +70,7 @@ class TransactionController extends Controller
         $transaction->total_harga = $total;
         $transaction->save();
 
-        return redirect()->route('transaction.index');
+        return redirect()->route('transaction.index')->with('success', 'Berhasil membuat teansaksi baru!');;
     }
 
     /**
@@ -118,6 +118,6 @@ class TransactionController extends Controller
         $transaction = Transaction::findOrFail($id);
         $transaction->delete();
 
-        return redirect()->route('transaction.index');
+        return redirect()->route('transaction.index')->with('success', 'Transaksi Selesai!');;
     }
 }

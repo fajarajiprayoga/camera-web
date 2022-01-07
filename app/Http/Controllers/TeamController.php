@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Team;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TeamController extends Controller
 {
@@ -59,7 +60,7 @@ class TeamController extends Controller
         $team->tugas = $request->tugas;
         $team->save();
 
-        return redirect()->route('teams.index');
+        return redirect()->route('teams.index')->with('success', 'Berhasil menambhkan anggota tim!');      
     }
 
     /**
@@ -122,7 +123,7 @@ class TeamController extends Controller
         $team->tugas = $request->tugas;
         $team->save();
 
-        return redirect()->route('teams.index');
+        return redirect()->route('teams.index')->with('success', 'Berhasil mengedit data anggota tim!');
     
     }
 
@@ -143,6 +144,6 @@ class TeamController extends Controller
 
         $team->delete();
 
-        return redirect()->route('teams.index');
+        return redirect()->route('teams.index')->with('warning', 'Berhasil menghapus anggota tim!');
     }
 }

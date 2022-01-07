@@ -36,6 +36,10 @@
     {{-- javascript --}}
 	@include('includes.js')
 
+	{{-- sweet akert --}}
+	@include('sweetalert::alert')
+
+
 </body>
 
 </html>
