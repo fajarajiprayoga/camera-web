@@ -103,7 +103,11 @@
                     <a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
                     <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Log out</a>
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <input type="submit" value="Log Out" class="dropdown-item text-center text-danger text-bold fw-bold">
+                    </form>
+                    
                 </div>
             </li>
         </ul>

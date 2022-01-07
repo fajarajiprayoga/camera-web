@@ -16,7 +16,7 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        $transactions = Transaction::with('items')->simplePaginate(5);
+        $transactions = Transaction::with('items')->orderBy('tglkmbli', 'ASC')->simplePaginate(5);;
 
         return view('pages.transaction.index')->with([
             'transactions' => $transactions
@@ -66,6 +66,9 @@ class TransactionController extends Controller
         $harga = $item->harga;
         $durasi = $request->durasi;
         $total = $harga * $durasi;
+
+        $tglkmbli = now()->addDays($durasi)->format('d/m/Y');
+        $transaction->tglkmbli = $tglkmbli;
 
         $transaction->total_harga = $total;
         $transaction->save();
